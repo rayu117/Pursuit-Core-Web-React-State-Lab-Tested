@@ -4,12 +4,22 @@
 
 Build a simple clicker game. It should have the following requirements:
 
-- Display the current score to the user
+- Display the current score to the user, starting from a score of `0`
+  - Use the _exact_ text: `Current Score: ` followed by the score.
 - Clicking a button increments the score by one
-- Have a button where the user can spend points to increase the value of each click
-- Display an `alert` with the text `You can't afford that!` if the user doesn't have enough points to spend
-- When the user has 100 points, display a victory screen
-- Have a button that resets the game
+  - The button text should have the _exact_ text: `+1`
+- Have a button where the user can spend `10` points to increase the value of each click by `1`
+  - The button should have the _exact_ text: `Pay 10 points to change from +1 to +2`
+  - Display an `alert` with the _exact_ text `You can't afford that!` if the user doesn't have enough points to spend
+  - If the user has enough points, reduce the score by 10, and add `1` to points you add to your score each time you click the button.
+  - The button text should change as well, for example from `+1` to `+2`
+  - The pay button text should also update, for example from `Pay 10 points to change from +1 to +2` to `Pay 10 points to change from +2 to +3`
+- When the user has `100` or more points, display a victory screen
+  - There should be an `<h2>` element with the _exact_ text `You Win!`
+  - There should be a button with the text `Play again?` (including the question mark)
+    - Clicking on this button starts the game over again with a score of 0, a `+1` button, etc.
+  - Keep the user's score on the screen
+  - Do not show the buttons to add to the score or pay points.
 
 ![clickerGame](./clickerGame.gif)
 
