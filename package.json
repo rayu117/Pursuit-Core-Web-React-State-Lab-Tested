@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --ci --reporters=default --reporters=jest-junit",
     "eject": "react-scripts eject",
     "cypress": "./node_modules/.bin/cypress open"
   },
@@ -39,7 +39,13 @@
   "devDependencies": {
     "cypress": "^6.7.0",
     "fast-glob": "^3.2.5",
+    "jest-junit": "^12.0.0",
     "junitxml-to-javascript": "^1.1.4",
     "node-fetch": "^2.6.1"
+  },
+  "jest-junit": {
+    "suiteNameTemplate": "{filename}",
+    "classNameTemplate": "{filename}",
+    "outputDirectory": "reports/junit"
   }
 }
